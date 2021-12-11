@@ -1,7 +1,8 @@
 import ExpenseItem from "./ExpenseItem";
+import './Expense.css';
 function Expense(props) {
   return (
-    <div>
+    <div class = "expenses">
       <ExpenseItem
         title={props.allProp[0].title}
         amount={props.allProp[0].amount}
