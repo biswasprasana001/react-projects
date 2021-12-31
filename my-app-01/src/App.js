@@ -1,6 +1,7 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
+import ClosedForm from "./components/NewExpense/ClosedForm";
 
 const DUMMY_EXPENSES = [
   {
@@ -27,14 +28,23 @@ const DUMMY_EXPENSES = [
 function App() {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
   const addExpenseHandler = (expense) => {
-    setExpenses(prevExpenses => {
-      return [expense, ...prevExpenses]
-    })
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  };
+
+  const [value, setValue] = useState(true);
+  const truthValue = (value) => {
+    setValue(value);
   };
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
+      {value === true ? (
+        <NewExpense onAddExpense={addExpenseHandler} switch={truthValue} />
+      ) : (
+        <ClosedForm switch={truthValue} />
+      )}
       <Expenses items={expenses} />
     </div>
   );
