@@ -25,14 +25,14 @@ const ExpenseForm = (props) => {
       date: new Date(enteredDate),
     };
     props.onSaveExpenseData(expenseData);
-    props.switch(false);
+    props.switch(true);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
   };
 
   const cancelHandler = () => {
-    props.switch(false);
+    props.switch(true);
   };
 
   return (

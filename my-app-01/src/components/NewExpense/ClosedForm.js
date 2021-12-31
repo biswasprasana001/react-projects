@@ -2,7 +2,7 @@ import "./ClosedForm.css";
 
 const ClosedForm = (props) => {
   const buttonHandler = () => {
-    props.switch(true);
+    props.switch(false);
   };
   return (
     <div className="new-expense">

@@ -41,9 +41,9 @@ function App() {
   return (
     <div>
       {value === true ? (
-        <NewExpense onAddExpense={addExpenseHandler} switch={truthValue} />
-      ) : (
         <ClosedForm switch={truthValue} />
+      ) : (
+        <NewExpense onAddExpense={addExpenseHandler} switch={truthValue} />
       )}
       <Expenses items={expenses} />
     </div>
