@@ -25,6 +25,7 @@ function App() {
           if (item.id === editID) {
             return { ...item, title: name };
           }
+          return item;
         })
       );
       setName("");
