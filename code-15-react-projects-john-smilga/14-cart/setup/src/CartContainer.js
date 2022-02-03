@@ -35,10 +35,7 @@ const CartContainer = () => {
             total <span>${total}</span>
           </h4>
         </div>
-        <button
-          className="btn clear-btn"
-          onClick={clearCart}
-        >
+        <button className="btn clear-btn" onClick={clearCart}>
           clear cart
         </button>
       </footer>

@@ -29,7 +29,7 @@ const reducer = (state, action) => {
     return { ...state, cart: tempCart };
   }
   if (action.type === "GET_TOTALS") {
-    const { total, amount } = state.cart.reduce(
+    let { total, amount } = state.cart.reduce(
       (cartTotal, cartItem) => {
         const { price, amount } = cartItem;
         const itemTotal = price * amount;
