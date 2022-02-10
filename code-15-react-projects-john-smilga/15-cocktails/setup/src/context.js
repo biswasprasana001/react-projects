@@ -6,7 +6,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("a");
+  const [searchTerm, setSearchTerm] = useState("");
   const [cocktails, setCocktails] = useState([]);
 
   const fetchDrinks = async () => {
@@ -17,17 +17,17 @@ const AppProvider = ({ children }) => {
       const { drinks } = data;
       if (drinks) {
         const newCocktails = drinks.map((item) => {
-          const { idDrink, strDrink, strDrinkThumb, strAlcohoic, strGlass } =
+          const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } =
             item;
           return {
             id: idDrink,
             name: strDrink,
             image: strDrinkThumb,
-            info: strAlcohoic,
+            info: strAlcoholic,
             glass: strGlass,
           };
         });
-        setCocktails(newCocktails)
+        setCocktails(newCocktails);
       } else {
         setCocktails([]);
       }
