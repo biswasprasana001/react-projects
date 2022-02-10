@@ -9,25 +9,23 @@ import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 function App() {
   return (
-    <div>
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/cocktail/:id">
-            <SingleCocktail />
-          </Route>
-          <Route path="*">
-            <Error />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/cocktail/:id">
+          <SingleCocktail />
+        </Route>
+        <Route path="*">
+          <Error />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
