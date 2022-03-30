@@ -133,6 +133,7 @@ p {
     width: 95vw;
   }
 }
+
 /*
 =============== 
 Tours
@@ -140,6 +141,8 @@ Tours
 */
 
 main {
+  width: 90vw;
+  max-width: var(--fixed-width);
   margin: 5rem auto;
 }
 
@@ -149,12 +152,12 @@ main {
 
 .title {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .underline {
-  width: 6rem;
+  width: 5rem;
   height: 0.25rem;
   background: var(--clr-primary-5);
   margin: 0 auto;
 }
-
