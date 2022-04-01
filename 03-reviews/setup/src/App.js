@@ -1,17 +1,7 @@
-import React from "react";
-import Review from "./Review";
+import React from 'react';
+import Review from './Review';
 function App() {
-  return (
-    <main>
-      <section className="container">
-        <div className="title">
-          <h2 className>Our Reviews</h2>
-          <div className="underline"></div>
-        </div>
-        <Review />
-      </section>
-    </main>
-  );
+  return <h2>reviews project setup</h2>;
 }
 
 export default App;
