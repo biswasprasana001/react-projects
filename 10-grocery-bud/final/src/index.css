@@ -255,9 +255,6 @@ Grocery List
   color: var(--clr-grey-5);
   background: var(--clr-grey-10);
 }
-.grocery-item:hover .title {
-  color: var(--clr-grey-5);
-}
 .title {
   margin-bottom: 0;
   color: var(--clr-grey-1);
