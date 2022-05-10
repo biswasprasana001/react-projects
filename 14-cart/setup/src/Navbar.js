@@ -1,7 +1,6 @@
-import React from 'react'
-import { useGlobalContext } from './context'
+import React from "react";
 const Navbar = () => {
-  return <></>
-}
+  return <></>;
+};
 
-export default Navbar
+export default Navbar;
