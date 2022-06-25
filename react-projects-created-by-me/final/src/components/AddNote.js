@@ -22,7 +22,6 @@ function AddNote({handleAddNote}) {
             handleAddNote(noteText);
             setNoteText('');
         }
-       
     }
     return (
         <div className="note new">
