@@ -7,6 +7,7 @@ import { useState } from "react";
 function App() {
   const [notes, setNotes] = useState([]);
   const [searchNote, setSearchNote] = useState("");
+  const [darkMode, setDarkMode] = useState(false);
 
   function addNote(text) {
     const date = new Date();
@@ -23,16 +24,18 @@ function App() {
     setNotes(newNotes);
   }
   return (
-    <div className="container">
-      <Header />
-      <Search handleSearch={setSearchNote} />
-      <NotesList
-        handleAddNote={addNote}
-        notes={notes.filter((note) =>
-          note.text.toLowerCase().includes(searchNote.toLowerCase())
-        )}
-        handleDelete={deletingNote}
-      />
+    <div className={`${darkMode && "dark-mode"}`}>
+      <div className="container">
+        <Header handleToggleDarkMode={setDarkMode} />
+        <Search handleSearch={setSearchNote} />
+        <NotesList
+          handleAddNote={addNote}
+          notes={notes.filter((note) =>
+            note.text.toLowerCase().includes(searchNote.toLowerCase())
+          )}
+          handleDelete={deletingNote}
+        />
+      </div>
     </div>
   );
 }
