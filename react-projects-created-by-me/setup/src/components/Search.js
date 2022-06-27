@@ -1,13 +1,15 @@
 import { MdSearch } from "react-icons/md";
 
-function Search({ handleSearch }) {
+function Search({ setSearchNote }) {
   return (
     <div className="search">
+      {/* we add the search icon */}
       <MdSearch className="search-icon" size="1.4em" />
+      {/* Here, when there is a change in input, there is change in state */}
       <input
         type="text"
         placeholder="Search for your notes..."
-        onChange={(e) => handleSearch(e.target.value)}
+        onChange={(e) => setSearchNote(e.target.value)}
       />
     </div>
   );
