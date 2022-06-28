@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Description from "./Description";
 
 const PokemonThumbnail = ({
@@ -21,17 +21,16 @@ const PokemonThumbnail = ({
   bs5,
   bs6,
 }) => {
-  const style = `thumb-container ${type}`;
   const [show, setShow] = useState(false);
+
   return (
-    <div className={style}>
-      <div className="number">
-        <small>#0{id}</small>
+    <div className="thumb-container">
+      <div className="img">
+        <img src={image} alt={name} />
       </div>
-      <img src={image} alt={name} />
-      <div className="detail-wrapper">
+      <div className="detail">
         <h3>{name.toUpperCase()}</h3>
-        <small>Type : {type}</small>
+        <h4>Type : {type}</h4>
         <button className="pokeinfo" onClick={() => setShow(!show)}>
           {show === true ? "Know less..." : "Know more..."}
         </button>
