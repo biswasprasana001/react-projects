@@ -209,7 +209,7 @@ Grocery List
   border-bottom-left-radius: var(--radius);
   border-color: transparent;
   font-size: 1rem;
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
   color: var(--clr-grey-5);
 }
 .grocery::placeholder {
