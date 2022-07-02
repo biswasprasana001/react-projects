@@ -10,7 +10,7 @@ export const AppProvider = ({ children }) => {
   const fetchCurrentWeather = async (cityName) => {
     try {
       const res = await fetch(
-        `http://api.weatherapi.com/v1/current.json?key=5baa84cbff214636ad162010223006&q=${cityName}&aqi=yes`
+        `https://api.weatherapi.com/v1/current.json?key=5baa84cbff214636ad162010223006&q=${cityName}&aqi=yes`
       );
       const data = await res.json();
       setCurrentWeather([data]);
@@ -22,7 +22,7 @@ export const AppProvider = ({ children }) => {
   const fetchData = async () => {
     try {
       const res = await fetch(
-        `http://api.weatherapi.com/v1/search.json?key=5baa84cbff214636ad162010223006&q=${searchTerm}`
+        `https://api.weatherapi.com/v1/search.json?key=5baa84cbff214636ad162010223006&q=${searchTerm}`
       );
       const data = await res.json();
       if (data.length > 0) {
