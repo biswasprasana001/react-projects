@@ -2,14 +2,24 @@ import { useEffect, useRef } from "react";
 import { useGlobalContext } from "../context";
 
 const DisplayInfo = () => {
+  // we use useRef to access the properties of element
+  // in which the background color is to be set
   const aqi = useRef();
+
+  // weather data received is destructured
   const { currentWeather } = useGlobalContext();
   const [data] = currentWeather;
   const { current } = data;
+
+  // we use it as short form
   const pm10 = current.air_quality.pm10;
 
+  // this renders when the weather-data is loaded
   useEffect(() => {
+    // we use it as short form as well
     const style = aqi.current.style;
+    // a/q to the pm10 data, the colors are added
+    // to give it graphical meaning
     if (pm10 <= 50) {
       style.backgroundColor = "#d4e6a5";
       style.color = "black";
@@ -50,6 +60,7 @@ const DisplayInfo = () => {
           </p>
         </div>
       </div>
+      {/* the aqi useRef is used here to access it's properties */}
       <div className="aqi" ref={aqi}>
         <p>
           <span className="aqi-data">

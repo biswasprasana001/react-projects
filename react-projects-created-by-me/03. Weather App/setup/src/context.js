@@ -13,6 +13,7 @@ export const AppProvider = ({ children }) => {
         `https://api.weatherapi.com/v1/current.json?key=5baa84cbff214636ad162010223006&q=${cityName}&aqi=yes`
       );
       const data = await res.json();
+      // the received data is set in currentWeather State
       setCurrentWeather([data]);
     } catch (error) {
       console.log(error);
@@ -20,6 +21,8 @@ export const AppProvider = ({ children }) => {
   };
 
   const fetchData = async () => {
+    // now when this runs the data is fetched a/q to the 
+    // input in searchTerm
     try {
       const res = await fetch(
         `https://api.weatherapi.com/v1/search.json?key=5baa84cbff214636ad162010223006&q=${searchTerm}`
@@ -33,8 +36,10 @@ export const AppProvider = ({ children }) => {
             country: place.country,
           };
         });
+        // data added if present
         setRecommendation([...cityNameRecommendations]);
       } else {
+        // if not, empty array is placed to not display anything
         setRecommendation([]);
       }
     } catch (error) {
@@ -43,6 +48,7 @@ export const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    // this runs with each change in searchTerm state
     fetchData();
   }, [searchTerm]);
 
