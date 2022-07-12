@@ -54,10 +54,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--mainBlack);
-  background: var(--mainBackground);
+  background: var(--mainBlack);
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
+  color: var(--mainBackground);
+  /* padding: 2rem; */
 }
 
 h1,
@@ -90,49 +92,95 @@ img {
 }
 
 .container {
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  margin: 0 auto;
+  width: 800px;
+  padding: 2rem;
 }
 
 .coin-search {
-  border: 2px dashed blue;
+  /* border: 2px dashed blue; */
 }
 
 .coin-search-bar {
-  border: 2px solid green;
+  display: block;
+  /* border: 2px solid green; */
+  /* margin: 0 auto; */
+  width: 100vw;
+  max-width: 415px;
+  border-color: transparent;
+  background: var(--mainBackground);
+  border-radius: var(--mainBorderRadius);
+  padding: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .coin-container {
-  border: 2px dashed green;
+  /* border: 2px dashed green; */
+  margin-top: 2rem;
 }
 
 .coin-row {
-  border: 2px solid red;
+  border-bottom: 1px solid white;
+  display: flex;
+  border-radius: 20%;
+}
+
+#coin-heading-row {
+  padding-bottom: 20px;
 }
 
 .coin {
-  border: 2px dashed blue;
+  /* border: 2px dashed white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  min-width: 110px;
+  padding: 0.75rem;
 }
 
-.coin img {
-  border: 2px solid green;
+#coin-heading {
+  width: 25%;
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
+  /* border: 2px dashed white; */
 }
 
-.coin h1 {
-  border: 2px solid red;
+.img {
+  /* border: 2px solid green; */
+  width: 20%;
+  min-width: 20px;
+}
+
+.coin h4 {
+  /* border: 2px solid red; */
+  margin-bottom: 0;
+  margin-left: 0.5rem;
 }
 
 .coin-data {
-  border: 2px dashed green;
+  /* border: 2px dashed green; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
-.coin-price {
-  border: 2px solid blue;
-}
-
-.coin-percent {
-  border: 2px solid green;
-}
-
+.coin-price,
+.coin-percent,
 .coin-marketcap {
-  border: 2px solid red;
+  /* border: 2px solid blue; */
+  margin-bottom: 0;
+  width: 33%;
+}
+
+.red {
+  color: #f00606;
+}
+
+.green {
+  color: #11d811;
 }
