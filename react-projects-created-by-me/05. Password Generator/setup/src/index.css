@@ -98,25 +98,47 @@ img {
   margin-bottom: 2rem;
 }
 
-.password {
+.passwordContainer {
   /* border: 2px solid green; */
   border-radius: var(--mainBorderRadius);
   background: var(--mainWhite);
   margin-bottom: 2rem;
   padding: 0.25rem 0.5rem;
   overflow: hidden;
+  word-wrap: break-word;
 }
 
-.password h4 {
+.passwordContainer h4 {
   margin: 0.5rem;
 }
 
+.btn-copy {
+  border: 2px solid var(--primaryColor);
+  color: var(--primaryColor);
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: var(--mainBorderRadius);
+  margin-bottom: 0.5rem;
+}
+
+.btn-copy:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+.btn-copy:active {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
 .btn {
+  border: 2px solid var(--primaryColor);
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
-  color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
-  padding: 0.45rem 0.8rem;
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
@@ -124,6 +146,7 @@ img {
   background: transparent;
   border-radius: var(--mainBorderRadius);
   margin-top: 1rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .btn:hover {
